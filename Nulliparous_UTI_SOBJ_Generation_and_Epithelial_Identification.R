@@ -4,6 +4,15 @@
 # UTI Mice (Bioproject : PRJNA855880) - 2 Samples
 #Steps Included:
 # 1. Load in Data
+# 2. Run QC
+# 3. Merge and Integrate SOBJs
+# 4. Perform Linear Regression
+# 5. Determine Parameters (dims and res)
+# 6. Define Epithelial Cells 
+# 7. Recluster Epithelial Cell Populations 
+# 8. Second Epithelial Re-clustering 
+# 9. Identification of Epithelial Clusters 
+# 10. Adding Labels to Meta Data
 ######
 
 #Required Libraries
@@ -169,7 +178,7 @@ Nulliparous_UTI_sobj.integrated <- RunPCA(Nulliparous_UTI_sobj.integrated,
 #DimPlot(Nulliparous_UTI_sobj.integrated, 
 #        reduction = "pca")
 
-#Determine Dimensionality of the dataset
+# 5. Determine Parameters (dims and res)
 ElbowPlot(Nulliparous_UTI_sobj.integrated) #Choose Value were the value on the y axis remains about constant
 
 #Determine Resolution of the dataset
